@@ -148,6 +148,64 @@ function fixPageConfig() {
   }
 }
 
+// 添加网络权限配置
+function addNetworkPermissions() {
+  const moduleJsonPath = 'entry/src/main/module.json5';
+  const stringJsonPath = 'entry/src/main/resources/base/element/string.json';
+  
+  // 检查 module.json5 是否已有网络权限配置
+  if (fs.existsSync(moduleJsonPath)) {
+    let content = fs.readFileSync(moduleJsonPath, 'utf8');
+    
+    if (!content.includes('ohos.permission.INTERNET')) {
+      // 添加网络权限配置
+      content = content.replace(
+        /"extensionAbilities": \[\s*\]/,
+        `"extensionAbilities": [],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:internet_permission_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]`
+      );
+      
+      fs.writeFileSync(moduleJsonPath, content);
+      console.log('✅ 添加了网络权限配置到 module.json5');
+    } else {
+      console.log('ℹ️  module.json5 已有网络权限配置');
+    }
+  }
+
+  // 检查并添加字符串资源
+  if (fs.existsSync(stringJsonPath)) {
+    let content = fs.readFileSync(stringJsonPath, 'utf8');
+    
+    if (!content.includes('internet_permission_reason')) {
+      // 添加网络权限说明字符串
+      content = content.replace(
+        /(\s*{\s*"name":\s*"EntryAbility_label",\s*"value":\s*"label"\s*})/,
+        `$1,
+    {
+      "name": "internet_permission_reason",
+      "value": "应用需要网络权限以支持WebView组件访问网页内容"
+    }`
+      );
+      
+      fs.writeFileSync(stringJsonPath, content);
+      console.log('✅ 添加了网络权限说明字符串');
+    } else {
+      console.log('ℹ️  字符串资源已包含网络权限说明');
+    }
+  }
+}
+
 // 修复 pageStack 数组访问问题
 function fixPageStackAccess() {
   const filesToCheck = [
@@ -203,6 +261,7 @@ try {
   fixAppTaroComp();
   fixPageConfig();
   fixPageStackAccess();
+  addNetworkPermissions();
   console.log('🎉 所有修复完成！');
 } catch (error) {
   console.error('❌ 修复过程中出现错误:', error.message);

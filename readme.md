@@ -115,7 +115,13 @@ pnpm run fix:taro
 - 缺少 `@Entry` 装饰器
 - `pageStack` 数组访问问题
 
-**解决方案**: 使用 `pnpm run build:harmony:fix` 命令，它会自动构建并修复这些问题。
+**WebView 网络权限**: 根据 [华为开发者论坛](https://developer.huawei.com/consumer/cn/forum/topic/0201894660337260403) 的说明，HarmonyOS 中的 WebView 组件需要配置网络权限才能正常工作。
+
+**解决方案**: 使用 `pnpm run build:harmony:fix` 命令，它会自动构建并修复这些问题，包括：
+- 自动修复所有导入路径问题
+- 自动添加必需的 `@Entry` 装饰器
+- 自动修复 `pageStack` 数组访问问题
+- 自动配置网络权限支持 WebView 组件
 
 ## 📱 运行应用
 

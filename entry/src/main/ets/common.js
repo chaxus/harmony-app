@@ -1,0 +1,1 @@
+import{c as e}from"./vendors.js";var r=e(function(e){return{currentTab:"index",setCurrentTab:function(r){return e({currentTab:r})},isWebViewVisible:!1,setWebViewVisible:function(r){return e({isWebViewVisible:r})}}});export{r as u};

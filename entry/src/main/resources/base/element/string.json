@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "internet_permission_reason",
+      "value": "应用需要网络权限以支持WebView组件访问网页内容"
     }
   ]
 }
