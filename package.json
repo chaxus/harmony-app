@@ -1,0 +1,17 @@
+{
+  "name": "harmony-taro-app",
+  "version": "1.0.0",
+  "description": "HarmonyOS application built with Taro framework",
+  "scripts": {
+    "build:harmony": "pnpm build:harmony",
+    "build:harmony:fix": "./build-and-fix.sh",
+    "fix:taro": "node fix-taro-build.js",
+    "clean": "rm -rf entry/build"
+  },
+  "devDependencies": {
+    "pnpm": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
