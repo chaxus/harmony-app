@@ -1,0 +1,20 @@
+// @ts-nocheck
+import type Taro from '../../types';
+export declare const onUnhandledRejection: typeof Taro.onUnhandledRejection;
+export declare const onThemeChange: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onPageNotFound: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onLazyLoadError: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onError: typeof Taro.onError;
+export declare const onAudioInterruptionEnd: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onAudioInterruptionBegin: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onAppShow: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const onAppHide: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offUnhandledRejection: typeof Taro.offUnhandledRejection;
+export declare const offThemeChange: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offPageNotFound: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offLazyLoadError: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offError: typeof Taro.offError;
+export declare const offAudioInterruptionEnd: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offAudioInterruptionBegin: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offAppShow: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
+export declare const offAppHide: (option?: {}, ...args: any[]) => Promise<Partial<import("../../utils/handler").ICallbackResult> & Record<string, unknown> & import("../../utils/handler").ICallbackResult>;
