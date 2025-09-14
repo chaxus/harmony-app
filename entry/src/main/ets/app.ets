@@ -37,7 +37,7 @@ export default class EntryAbility extends UIAbility {
       }
     })
 
-    stage.loadContent('pages/index/index', (err, data) => {
+    stage.loadContent('taro_tabbar', (err, data) => {
       const windowClass = stage.getMainWindowSync()
       Current.uiContext = windowClass.getUIContext()
       windowClass.setWindowLayoutFullScreen(true)
