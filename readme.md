@@ -1,6 +1,6 @@
 # HarmonyOS 应用项目
 
-基于 [chaxus/native](https://github.com/chaxus/native/tree/harmony) 项目的 HarmonyOS 分支构建的跨平台移动应用。
+基于 [chaxus/native](https://github.com/chaxus/native/tree/taro) 项目的 HarmonyOS 分支构建的跨平台移动应用。
 
 ## 📱 项目概述
 
